@@ -1,0 +1,22 @@
+{
+    "app": "I18n",
+    "switchLocale": {
+        "en": "Change Language to English",
+        "th": "Change Language to ไทย"
+    },
+    "homePage": {
+        "title": "Home",
+        "text": "Hello, $where :)",
+        "next": "Next Page"
+    },
+    "nextPage": {
+        "title": "Next",
+        "text": "Goodbye, $where :(",
+        "next": "Alert"
+    },
+    "dialogBox": {
+        "title": "Title",
+        "text": "It is my life.",
+        "ok": "OK"
+    }
+}

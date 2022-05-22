@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './i18n/strings.g.dart';
+import './localization.dart';
 import './alert.dart';
 
 class NextPage extends StatefulWidget {
@@ -13,7 +15,26 @@ class _NextState extends State<NextPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Next'),
+        title: Text(t.nextPage.title),
+        actions: [
+          // Thai language
+          IconButton(
+            icon: Image.asset('assets/locales/th.png'),
+            tooltip: t.switchLocale.th,
+            onPressed: () => setState(
+              () => Localization.instance().changeLocale('th'),
+            ),
+          ),
+
+          // English language
+          IconButton(
+            icon: Image.asset('assets/locales/en.png'),
+            tooltip: t.switchLocale.en,
+            onPressed: () => setState(
+              () => Localization.instance().changeLocale('en'),
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -22,10 +43,10 @@ class _NextState extends State<NextPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Goodbye, world :|'),
+              Text(t.nextPage.text(where: 'world')),
               const Padding(padding: EdgeInsets.only(bottom: 16)),
               ElevatedButton(
-                child: const Text('Alert'),
+                child: Text(t['nextPage.next']),
                 onPressed: () {
                   DialogBox.show(context);
                 },

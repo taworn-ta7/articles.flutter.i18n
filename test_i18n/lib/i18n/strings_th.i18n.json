@@ -1,0 +1,22 @@
+{
+    "app": "เป็นสากล",
+    "switchLocale": {
+        "en": "Change Language to English",
+        "th": "Change Language to ไทย"
+    },
+    "homePage": {
+        "title": "หน้าแรก",
+        "text": "อรุณสวัสดิ์, $where :)",
+        "next": "Next Page"
+    },
+    "nextPage": {
+        "title": "ต่อไป",
+        "text": "ลาก่อน, $where :(",
+        "next": "เตือน"
+    },
+    "dialogBox": {
+        "title": "หัวข้อ",
+        "text": "นี่คือชีวิตของฉัน",
+        "ok": "ตกลง"
+    }
+}

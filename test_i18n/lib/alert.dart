@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './i18n/strings.g.dart';
 
 class DialogBox {
   static Future<void> show(BuildContext context) async {
@@ -7,17 +8,17 @@ class DialogBox {
       barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Title'),
+          title: Text(t.dialogBox.title),
           content: SingleChildScrollView(
             child: ListBody(
-              children: const <Widget>[
-                Text('This is my life.'),
+              children: <Widget>[
+                Text(t.dialogBox.text),
               ],
             ),
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('OK'),
+              child: Text(t.dialogBox.ok),
               onPressed: () {
                 Navigator.of(context).pop();
               },
